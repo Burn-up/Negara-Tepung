@@ -19,11 +19,15 @@
       tombolnya nggak ada fungsi btw
     </div>
     <!-- jquerry -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
-    <script></script>
+    <script src="jquerry.js"></script>
+    <script>
+      $(window).scroll(() => {
+        let wScroll = $(this).scrollTop();
+        $(".header-title").css({
+          transform: "translateY(" + wScroll * 0.5 + "px)",
+          opacity: 1 - wScroll * 0.001,
+        });
+      });
+    </script>
   </body>
 </html>
